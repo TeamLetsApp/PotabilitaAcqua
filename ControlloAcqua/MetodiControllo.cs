@@ -36,5 +36,36 @@ namespace ControlloAcqua
                 return risposta;
             }
         }
+        public static bool Residuo(double litri,double residuo)
+        {
+            double residuomax = litri * 1500;
+            bool risposta;
+            if(residuo>residuomax)
+            {
+                 risposta = false;
+                return risposta;
+            }
+            else
+            {
+                risposta = true;
+                return risposta;
+            }
+        }
+        public static bool ControlloAmmoniaca(double ammoniaca, double litri)
+        {
+            double ammoniacamax = ammoniaca * litri;
+            bool risposta;
+            if (ammoniaca > ammoniacamax)
+            {
+                risposta = false;
+                return risposta;
+            }
+            else
+            {
+                risposta = true;
+                return risposta;
+            }
+
+        }
     }
 }
