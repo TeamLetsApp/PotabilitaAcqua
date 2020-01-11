@@ -53,7 +53,7 @@ namespace ControlloAcqua
         }
         public static bool ControlloAmmoniaca(double ammoniaca, double litri)
         {
-            double ammoniacamax = ammoniaca * litri;
+            double ammoniacamax = 0.05 * litri;
             bool risposta;
             if (ammoniaca > ammoniacamax)
             {
@@ -66,6 +66,48 @@ namespace ControlloAcqua
                 return risposta;
             }
 
+        }
+        public static bool ControlloNitriti(double nitriti)
+        {
+            bool risposta;
+            if (nitriti > 0)
+            {
+                risposta = false;
+                return risposta;
+            }
+            else
+                risposta = true;
+            return risposta;
+        }
+        public static bool ControlloNitrati(double nitrati,double litri)
+        {
+            double nitratimax = 5 * litri;
+            bool risposta;
+            if (nitrati > nitratimax)
+            {
+                risposta = false;
+                return risposta;
+            }
+            else
+            {
+                risposta = true;
+                return risposta;
+            }
+        }
+        public static bool ControlloCloruri(double cloruri, double litri)
+        {
+            double clorurimax = 25 * litri;
+            bool risposta;
+            if (cloruri > clorurimax)
+            {
+                risposta = false;
+                return risposta;
+            }
+            else
+            {
+                risposta = true;
+                return risposta;
+            }
         }
     }
 }
