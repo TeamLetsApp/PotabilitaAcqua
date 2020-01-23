@@ -9,7 +9,7 @@ namespace ControlloAcqua
             int tempmin = 12;
             int tempmax = 25;
             bool risposta;
-            if (temperatura>=tempmin||temperatura<=tempmax)
+            if (temperatura>=tempmin&&temperatura<=tempmax)
             {
                 risposta = true;
                 return risposta;
@@ -25,7 +25,7 @@ namespace ControlloAcqua
             double phmin=6.5;
             double phmax = 8.5;
             bool risposta;
-            if(ph>=phmin||ph<=phmax)
+            if(ph>=phmin&&ph<=phmax)
             {
                 risposta = true;
                 return risposta;
@@ -36,47 +36,42 @@ namespace ControlloAcqua
                 return risposta;
             }
         }
-        public static bool Residuo(double litri,double residuo)
+        public static bool Residuo(double residuo, double litri)
         {
-            double residuomax = litri * 1500;
+            double residuomax =1500* litri;
             bool risposta;
-            if(residuo>residuomax)
+            if(residuo<residuomax)
             {
-                 risposta = false;
+                 risposta = true;
                 return risposta;
             }
             else
-            {
-                risposta = true;
-                return risposta;
-            }
-        }
-        public static bool ControlloAmmoniaca(double ammoniaca, double litri)
-        {
-            double ammoniacamax = 0.05 * litri;
-            bool risposta;
-            if (ammoniaca > ammoniacamax)
             {
                 risposta = false;
                 return risposta;
             }
-            else
+        }
+        public static bool ControlloAmmoniaca(double ammoniaca, double litro)
+        {
+            double ammoniacamax = 0.05 * litro ;
+            bool risposta;
+            if (ammoniaca < ammoniacamax)
             {
-                risposta = true;
-                return risposta;
+                return risposta = true;
             }
-
+            else
+                return risposta = false;
         }
         public static bool ControlloNitriti(double nitriti)
         {
             bool risposta;
-            if (nitriti > 0)
+            if (nitriti == 0)
             {
-                risposta = false;
+                risposta = true;
                 return risposta;
             }
             else
-                risposta = true;
+                risposta = false;
             return risposta;
         }
         public static bool ControlloNitrati(double nitrati,double litri)
@@ -96,7 +91,7 @@ namespace ControlloAcqua
         }
         public static bool ControlloCloruri(double cloruri, double litri)
         {
-            double clorurimax = 25 * litri;
+            double clorurimax = 25 * litri ;
             bool risposta;
             if (cloruri > clorurimax)
             {
@@ -109,5 +104,6 @@ namespace ControlloAcqua
                 return risposta;
             }
         }
+
     }
 }
