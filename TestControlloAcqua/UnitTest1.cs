@@ -1,4 +1,4 @@
-using ControlloAcqua;
+using MetodiLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestControlloAcqua
@@ -11,7 +11,7 @@ namespace TestControlloAcqua
         {
             double temp = 20;
             bool risp = true;
-            bool ritorno = MetodiControllo.ControlloTemperatura(temp);
+            bool ritorno = Metodi.ControlloTemperatura(temp);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -19,7 +19,7 @@ namespace TestControlloAcqua
         {
             double ph = 9.6;
             bool risp = false;
-            bool ritorno = MetodiControllo.ControlloPh(ph);
+            bool ritorno = Metodi.ControlloPh(ph);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -28,7 +28,7 @@ namespace TestControlloAcqua
             double litro = 2;
             double residuo = 400;
             bool risp = true;
-            bool ritorno = MetodiControllo.Residuo(residuo , litro);
+            bool ritorno = Metodi.Residuo(residuo , litro);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -37,7 +37,7 @@ namespace TestControlloAcqua
             double litro = 7;
             double ammo = 1.4;
             bool risp = false;
-            bool ritorno = MetodiControllo.ControlloAmmoniaca(ammo , litro );
+            bool ritorno = Metodi.ControlloAmmoniaca(ammo , litro );
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -46,7 +46,7 @@ namespace TestControlloAcqua
             
             double nitriti = 0;
             bool risp = true;
-            bool ritorno = MetodiControllo.ControlloNitriti(nitriti);
+            bool ritorno = Metodi.ControlloNitriti(nitriti);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -55,7 +55,7 @@ namespace TestControlloAcqua
             double litro = 7;
             double nitrati = 35;
             bool risp = true;
-            bool ritorno = MetodiControllo.ControlloNitrati(nitrati, litro);
+            bool ritorno = Metodi.ControlloNitrati(nitrati, litro);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
@@ -64,7 +64,7 @@ namespace TestControlloAcqua
             double litro = 7;
             double cloruri =175;
             bool risp = true;
-            bool ritorno = MetodiControllo.ControlloCloruri(cloruri, litro);
+            bool ritorno = Metodi.ControlloCloruri(cloruri, litro);
             Assert.AreEqual(risp, ritorno);
         }
     }
