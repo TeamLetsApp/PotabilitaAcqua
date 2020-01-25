@@ -40,7 +40,7 @@ namespace MetodiLibrary
                     return risposta;
                 }
             }
-            public static bool Residuo(double residuo, double litri)
+            public static bool ControlloResiduo(double residuo, double litri)
             {
                 double residuomax = 1500 * litri;
                 bool risposta;

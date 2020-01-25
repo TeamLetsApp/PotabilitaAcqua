@@ -28,7 +28,6 @@ namespace AcquaWpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            temperatura.Clear();
             double t = double.Parse(temperatura.Text);
             bool rispT = Metodi.ControlloTemperatura(t);
             if(rispT==true)
@@ -39,6 +38,20 @@ namespace AcquaWpf
             {
                 lblresult.Content += "Temperatura:no \n";
             }
+            temperatura.Clear();
+            double p = double.Parse(ph.Text);
+            bool rispP = Metodi.ControlloPh(p);
+            if(rispP==true)
+            {
+                lblresult.Content += "Ph:si \n"; 
+            }
+            else
+            {
+                lblresult.Content += "Ph:no \n";
+            }
+            ph.Clear();
+            double r = double.Parse(residuo.Text);
+            bool rispR = Metodi.ControlloResiduo(r);
         }
     }
 }

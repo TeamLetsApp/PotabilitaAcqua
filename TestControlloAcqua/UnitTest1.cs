@@ -28,7 +28,7 @@ namespace TestControlloAcqua
             double litro = 2;
             double residuo = 400;
             bool risp = true;
-            bool ritorno = Metodi.Residuo(residuo , litro);
+            bool ritorno = Metodi.ControlloResiduo(residuo , litro);
             Assert.AreEqual(risp, ritorno);
         }
         [TestMethod]
