@@ -28,7 +28,8 @@ namespace AcquaWpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           try {
+            try
+            {
                 double t = double.Parse(temperatura.Text);
                 bool rispT = Metodi.ControlloTemperatura(t);
                 if (rispT == true)
@@ -39,7 +40,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Temperatura:no \n";
                 }
-                temperatura.Clear();
                 double p = double.Parse(ph.Text);
                 bool rispP = Metodi.ControlloPh(p);
                 if (rispP == true)
@@ -50,7 +50,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Ph:no \n";
                 }
-                ph.Clear();
                 double r = double.Parse(residuo.Text);
                 double l1 = double.Parse(litri.Text);
                 bool rispR = Metodi.ControlloResiduo(r, l1);
@@ -62,7 +61,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Residuo:no \n";
                 }
-                residuo.Clear();
                 double a = double.Parse(ammoniaca.Text);
                 double l2 = double.Parse(litri.Text);
                 bool rispA = Metodi.ControlloAmmoniaca(a, l2);
@@ -74,7 +72,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Ammoniaca:no \n";
                 }
-                ammoniaca.Clear();
                 double ni = double.Parse(nitriti.Text);
                 bool rispNi = Metodi.ControlloNitriti(ni);
                 if (rispNi == true)
@@ -85,7 +82,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Nitriti:no \n";
                 }
-                nitriti.Clear();
                 double na = double.Parse(nitrati.Text);
                 double l3 = double.Parse(litri.Text);
                 bool rispNa = Metodi.ControlloNitrati(na, l3);
@@ -97,7 +93,6 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Nitrati:no \n";
                 }
-                nitrati.Clear();
                 double c = double.Parse(cloruri.Text);
                 double l4 = double.Parse(litri.Text);
                 bool rispC = Metodi.ControlloCloruri(a, l4);
@@ -109,10 +104,15 @@ namespace AcquaWpf
                 {
                     lblresult.Content += "Cloruri:no \n";
                 }
-                cloruri.Clear();
             }
             catch
-            { MessageBox.Show("Devi riempire tutti i campi con valori numerici", "ERRORE", MessageBoxButton.OK, MessageBoxImage.Error); }
+            {
+                MessageBox.Show("Devi riempire tutti i campi con valori numerici", "ERRORE", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                string[] txtbox = new string[txtph, txttemperatura, residuo, litri, nitriti, nitrati cloruri];
+            }
 
         }
     }
