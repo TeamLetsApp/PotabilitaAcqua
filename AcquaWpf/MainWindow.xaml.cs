@@ -25,9 +25,17 @@ namespace AcquaWpf
         {
             InitializeComponent();
         }
+        bool f1;
+        bool f2;
+        bool f3;
+        bool f4;
+        bool f5;
+        bool f6;
+        bool f7;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            lblresult.Content = "";
             try
             {
                 double t = double.Parse(temperatura.Text);
@@ -35,20 +43,24 @@ namespace AcquaWpf
                 if (rispT == true)
                 {
                     lblresult.Content += "Temperatura:si \n";
+                     f1 = true;
                 }
                 else
                 {
                     lblresult.Content += "Temperatura:no \n";
+                     f1 = false;
                 }
                 double p = double.Parse(ph.Text);
                 bool rispP = Metodi.ControlloPh(p);
                 if (rispP == true)
                 {
                     lblresult.Content += "Ph:si \n";
+                     f2 = true;
                 }
                 else
                 {
                     lblresult.Content += "Ph:no \n";
+                    f2 = false;
                 }
                 double r = double.Parse(residuo.Text);
                 double l1 = double.Parse(litri.Text);
@@ -56,10 +68,13 @@ namespace AcquaWpf
                 if (rispR == true)
                 {
                     lblresult.Content += "Residuo:si \n";
+                     f3 = true;
                 }
                 else
                 {
                     lblresult.Content += "Residuo:no \n";
+                    f3 = false;
+
                 }
                 double a = double.Parse(ammoniaca.Text);
                 double l2 = double.Parse(litri.Text);
@@ -67,20 +82,24 @@ namespace AcquaWpf
                 if (rispA == true)
                 {
                     lblresult.Content += "Ammoniaca:si \n";
+                     f4 = true;
                 }
                 else
                 {
                     lblresult.Content += "Ammoniaca:no \n";
+                     f4 = false;
                 }
                 double ni = double.Parse(nitriti.Text);
                 bool rispNi = Metodi.ControlloNitriti(ni);
                 if (rispNi == true)
                 {
                     lblresult.Content += "Nitriti:si \n";
+                     f5 = true;
                 }
                 else
                 {
                     lblresult.Content += "Nitriti:no \n";
+                     f5 = false;
                 }
                 double na = double.Parse(nitrati.Text);
                 double l3 = double.Parse(litri.Text);
@@ -88,10 +107,12 @@ namespace AcquaWpf
                 if (rispNa == true)
                 {
                     lblresult.Content += "Nitrati:si \n";
+                     f6 = true;
                 }
                 else
                 {
                     lblresult.Content += "Nitrati:no \n";
+                     f6 = false;
                 }
                 double c = double.Parse(cloruri.Text);
                 double l4 = double.Parse(litri.Text);
@@ -99,10 +120,12 @@ namespace AcquaWpf
                 if (rispC == true)
                 {
                     lblresult.Content += "Cloruri:si \n";
+                     f7 = true;
                 }
                 else
                 {
                     lblresult.Content += "Cloruri:no \n";
+                     f7 = false;
                 }
             }
             catch
@@ -111,9 +134,27 @@ namespace AcquaWpf
             }
             finally
             {
-                string[] txtbox = new string[txtph, txttemperatura, residuo, litri, nitriti, nitrati cloruri];
+                ph.Text = "inserisci il ph";
+                cloruri.Text = "inserisci i cloruri(mg/l)";
+                nitrati.Text = "inserisci i nitrati(mg/l)";
+                nitriti.Text = "inserisci i nitriti(mg/l)";
+                litri.Text = "inserisci i litri";
+                ammoniaca.Text = "inserisci l'ammoniaca(mg/l)";
+                residuo.Text = "inserisci il residuo(mg/l)";
+                temperatura.Text = "inserisci la temperatura(C°)";
             }
-
+            if(f1&&f2&&f3&&f4&&f5&&f6&&f7==true)
+            {
+                lblresult.Content += (" \n");
+                lblresult.Content += (" \n");
+                lblresult.Content += ("L'acqua è potabile");
+            }
+            else
+            {
+                lblresult.Content += (" \n");
+                lblresult.Content += (" \n");
+                lblresult.Content += ("L'acqua non è potabile");
+            }
         }
     }
 }
