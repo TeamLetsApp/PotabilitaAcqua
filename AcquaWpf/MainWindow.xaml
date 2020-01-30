@@ -11,16 +11,16 @@
             <ColumnDefinition Width="533*"/>
             <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="ph" HorizontalAlignment="Left" Height="34" Margin="10,369,0,0" TextWrapping="Wrap" Text="ph" VerticalAlignment="Top" Width="146" FontSize="20"/>
-        <TextBox x:Name="temperatura" HorizontalAlignment="Left" Height="32" Margin="10,307,0,0" TextWrapping="Wrap" Text=" temperatura(C°)" VerticalAlignment="Top" Width="161" FontSize="20"/>
-        <TextBox x:Name="residuo" HorizontalAlignment="Left" Height="32" Margin="10,243,0,0" TextWrapping="Wrap" Text="residuo(mg/l)" VerticalAlignment="Top" Width="146" FontSize="20"/>
-        <TextBox x:Name="ammoniaca" HorizontalAlignment="Left" Height="32" Margin="193,346,0,0" TextWrapping="Wrap" Text="ammoniaca(mg/l)" VerticalAlignment="Top" Width="166" FontSize="20"/>
-        <TextBox  x:Name="nitriti" HorizontalAlignment="Left" Height="32" Margin="378,243,0,0" TextWrapping="Wrap" Text=" nitriti(mg/l)" VerticalAlignment="Top" Width="146" FontSize="20"/>
-        <TextBox x:Name="nitrati" HorizontalAlignment="Left" Height="32" Margin="378,307,0,0" TextWrapping="Wrap" Text=" nitrati(mg/l)" VerticalAlignment="Top" Width="146" FontSize="20"/>
-        <TextBox x:Name="cloruri" HorizontalAlignment="Left" Height="34" Margin="378,369,0,0" TextWrapping="Wrap" Text="cloruri(mg/l)" VerticalAlignment="Top" Width="146" FontSize="20"/>
-        <Button Content="VERIFICA" HorizontalAlignment="Left" Height="32" Margin="193,286,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold" Click="Button_Click"/>
-        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="399" Margin="529,10,0,0" VerticalAlignment="Top" Width="249" BorderBrush="Black" Background="#FFD8FF2A" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="193,243,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="146" FontSize="20"/>
+        <TextBox x:Name="ph" HorizontalAlignment="Left" Height="34" Margin="5,331,0,0" TextWrapping="Wrap" Text="ph" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Ph_GotMouseCapture"  />
+        <TextBox x:Name="temperatura" HorizontalAlignment="Left" Height="32" Margin="277,167,0,0" TextWrapping="Wrap" Text=" temperatura(C°)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Temperatura_GotMouseCapture"/>
+        <TextBox x:Name="residuo" HorizontalAlignment="Left" Height="32" Margin="5,220,0,0" TextWrapping="Wrap" Text="residuo(mg/l)" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Residuo_GotMouseCapture"/>
+        <TextBox x:Name="ammoniaca" HorizontalAlignment="Left" Height="32" Margin="5,167,0,0" TextWrapping="Wrap" Text="ammoniaca(mg/l)" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Ammoniaca_GotMouseCapture"/>
+        <TextBox  x:Name="nitriti" HorizontalAlignment="Left" Height="32" Margin="277,218,0,0" TextWrapping="Wrap" Text=" nitriti(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Nitriti_GotMouseCapture"/>
+        <TextBox x:Name="nitrati" HorizontalAlignment="Left" Height="32" Margin="277,272,0,0" TextWrapping="Wrap" Text=" nitrati(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Nitrati_GotMouseCapture"/>
+        <TextBox x:Name="cloruri" HorizontalAlignment="Left" Height="34" Margin="277,331,0,0" TextWrapping="Wrap" Text="cloruri(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Cloruri_GotMouseCapture"/>
+        <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="5,272,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Litri_GotMouseCapture"/>
+        <Button Content="VERIFICA" HorizontalAlignment="Left" Height="32" Margin="187,377,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold" Click="Button_Click"/>
+        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="399" Margin="529,10,0,0" VerticalAlignment="Top" Width="249" BorderBrush="Black" Background="#FFD8FF2A" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
         <Image Margin="10,-22,43,201" Source="/images/logo1.png"/>
     </Grid>
 </Window>
