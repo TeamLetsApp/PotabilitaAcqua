@@ -131,6 +131,15 @@ namespace AcquaWpf
             catch
             {
                 MessageBox.Show("Devi riempire tutti i campi con valori numerici", "ERRORE", MessageBoxButton.OK, MessageBoxImage.Error);
+                ph.Clear();
+                cloruri.Clear();
+                nitrati.Clear();
+                nitriti.Clear();
+                litri.Clear();
+                ammoniaca.Clear();
+                residuo.Clear();
+                temperatura.Clear();
+                lblresult.Content = "";
             }
             finally
             {
