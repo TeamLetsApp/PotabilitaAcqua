@@ -21,6 +21,6 @@
         <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="25,249,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Litri_GotMouseCapture" Background="#FF22FFF5" FontWeight="Bold" Foreground="Black"/>
         <Button Content="VERIFICA" HorizontalAlignment="Left" Height="48" Margin="177,361,0,0" VerticalAlignment="Top" Width="183" FontWeight="Bold" Click="Button_Click" RenderTransformOrigin="0.671,0.592" FontSize="36" Background="White" Foreground="Black"/>
         <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="259" BorderBrush="Black" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold" Foreground="Black" Grid.Column="1"/>
-        <Image Margin="10,10,112,286" Source="/images/logo1.png"/>
+        <Image Margin="71,0,51,296" Source="/images/logo1.png"/>
     </Grid>
 </Window>
