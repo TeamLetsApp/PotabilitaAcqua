@@ -11,16 +11,16 @@
             <ColumnDefinition Width="533*"/>
             <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="ph" HorizontalAlignment="Left" Height="34" Margin="5,331,0,0" TextWrapping="Wrap" Text="ph" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Ph_GotMouseCapture"  />
-        <TextBox x:Name="temperatura" HorizontalAlignment="Left" Height="32" Margin="277,167,0,0" TextWrapping="Wrap" Text=" temperatura(C°)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Temperatura_GotMouseCapture"/>
-        <TextBox x:Name="residuo" HorizontalAlignment="Left" Height="32" Margin="5,220,0,0" TextWrapping="Wrap" Text="residuo(mg/l)" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Residuo_GotMouseCapture"/>
-        <TextBox x:Name="ammoniaca" HorizontalAlignment="Left" Height="32" Margin="5,167,0,0" TextWrapping="Wrap" Text="ammoniaca(mg/l)" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Ammoniaca_GotMouseCapture"/>
-        <TextBox  x:Name="nitriti" HorizontalAlignment="Left" Height="32" Margin="277,218,0,0" TextWrapping="Wrap" Text=" nitriti(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Nitriti_GotMouseCapture"/>
-        <TextBox x:Name="nitrati" HorizontalAlignment="Left" Height="32" Margin="277,272,0,0" TextWrapping="Wrap" Text=" nitrati(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Nitrati_GotMouseCapture"/>
-        <TextBox x:Name="cloruri" HorizontalAlignment="Left" Height="34" Margin="277,331,0,0" TextWrapping="Wrap" Text="cloruri(mg/l)" VerticalAlignment="Top" Width="233" FontSize="20" GotMouseCapture="Cloruri_GotMouseCapture"/>
-        <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="5,272,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="237" FontSize="20" GotMouseCapture="Litri_GotMouseCapture"/>
-        <Button Content="VERIFICA" HorizontalAlignment="Left" Height="32" Margin="187,377,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold" Click="Button_Click"/>
-        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="399" Margin="529,10,0,0" VerticalAlignment="Top" Width="249" BorderBrush="Black" Background="#FFD8FF2A" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold"/>
-        <Image Margin="10,-22,43,201" Source="/images/logo1.png"/>
+        <TextBox x:Name="ph" HorizontalAlignment="Left" Height="34" Margin="25,308,0,0" TextWrapping="Wrap" Text="ph" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Ph_GotMouseCapture" Background="#FFACFFF7" SelectionBrush="#FF0176D3" FontWeight="Bold" Foreground="Black"  />
+        <TextBox x:Name="temperatura" HorizontalAlignment="Left" Height="32" Margin="340,138,0,0" TextWrapping="Wrap" Text=" temperatura(C°)" VerticalAlignment="Top" Width="169" FontSize="20" GotMouseCapture="Temperatura_GotMouseCapture" Background="#FF00AEFF" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="residuo" HorizontalAlignment="Left" Height="32" Margin="25,195,0,0" TextWrapping="Wrap" Text="residuo(mg/l)" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Residuo_GotMouseCapture" Background="#FF51D8FF" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="ammoniaca" HorizontalAlignment="Left" Height="32" Margin="25,133,0,0" TextWrapping="Wrap" Text="ammoniaca(mg/l)" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Ammoniaca_GotMouseCapture" Background="#FF00AEFF" FontWeight="Bold" Foreground="Black"/>
+        <TextBox  x:Name="nitriti" HorizontalAlignment="Left" Height="32" Margin="340,195,0,0" TextWrapping="Wrap" Text=" nitriti(mg/l)" VerticalAlignment="Top" Width="169" FontSize="20" GotMouseCapture="Nitriti_GotMouseCapture" Background="#FF51D8FF" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="nitrati" HorizontalAlignment="Left" Height="32" Margin="340,249,0,0" TextWrapping="Wrap" Text=" nitrati(mg/l)" VerticalAlignment="Top" Width="169" FontSize="20" GotMouseCapture="Nitrati_GotMouseCapture" SelectionBrush="#FF008EFF" Background="#FF22FFF5" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="cloruri" HorizontalAlignment="Left" Height="34" Margin="340,308,0,0" TextWrapping="Wrap" Text="cloruri(mg/l)" VerticalAlignment="Top" Width="169" FontSize="20" GotMouseCapture="Cloruri_GotMouseCapture" Background="#FFACFFF7" FontWeight="Bold" Foreground="Black"/>
+        <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="25,249,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Litri_GotMouseCapture" Background="#FF22FFF5" FontWeight="Bold" Foreground="Black"/>
+        <Button Content="VERIFICA" HorizontalAlignment="Left" Height="48" Margin="177,361,0,0" VerticalAlignment="Top" Width="183" FontWeight="Bold" Click="Button_Click" RenderTransformOrigin="0.671,0.592" FontSize="36" Background="#FFBBEAFF"/>
+        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="259" BorderBrush="Black" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold" Foreground="Black" Grid.Column="1"/>
+        <Image Margin="10,10,112,286" Source="/images/logo1.png"/>
     </Grid>
 </Window>
