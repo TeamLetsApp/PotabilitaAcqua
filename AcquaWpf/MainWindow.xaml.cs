@@ -43,11 +43,13 @@ namespace AcquaWpf
                 if (rispT == true)
                 {
                     lblresult.Content += "Temperatura : si \n";
-                     f1 = true;
+                    lblresult.Foreground = new SolidColorBrush(Colors.Green);
+                    f1 = true;
                 }
                 else
                 {
                     lblresult.Content += "Temperatura : no \n";
+                    lblresult.Foreground = new SolidColorBrush(Colors.Red);
                      f1 = false;
                 }
                 double p = double.Parse(ph.Text);

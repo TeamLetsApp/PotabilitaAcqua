@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcquaWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="533*"/>
@@ -20,7 +20,7 @@
         <TextBox x:Name="cloruri" HorizontalAlignment="Left" Height="34" Margin="340,308,0,0" TextWrapping="Wrap" Text="cloruri(mg/l)" VerticalAlignment="Top" Width="169" FontSize="20" GotMouseCapture="Cloruri_GotMouseCapture" Background="#FFACFFF7" FontWeight="Bold" Foreground="Black"/>
         <TextBox x:Name="litri" HorizontalAlignment="Left" Height="32" Margin="25,249,0,0" TextWrapping="Wrap" Text="litri" VerticalAlignment="Top" Width="182" FontSize="20" GotMouseCapture="Litri_GotMouseCapture" Background="#FF22FFF5" FontWeight="Bold" Foreground="Black"/>
         <Button   Content="VERIFICA" HorizontalAlignment="Left" Height="58" Margin="188,351,0,0" VerticalAlignment="Top" Width="182" FontWeight="Bold" Click="Button_Click" RenderTransformOrigin="1,1" FontSize="36" Background="White" Foreground="Black" Padding="1" UseLayoutRounding="True" BorderThickness="5" BorderBrush="#FF0017FF"/>
-        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="259" BorderBrush="Black" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold" Foreground="Black" Grid.Column="1"/>
+        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="259" BorderBrush="Black" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold" Foreground="Black" Grid.Column="1"/>
         <Image Margin="46,0,35,286" Source="/images/logo.png"/>
     </Grid>
 </Window>
