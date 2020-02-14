@@ -28,6 +28,6 @@
         <Label Name="lblresult5" HorizontalAlignment="Left" Height="36" Margin="0,144,0,0" VerticalAlignment="Top" Width="259" Grid.Column="1" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold"/>
         <Label Name="lblresult6" HorizontalAlignment="Left" Height="36" Margin="0,180,0,0" VerticalAlignment="Top" Width="259" RenderTransformOrigin="3.142,6.286" Grid.Column="1" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold"/>
         <Label Name="lblresult7" HorizontalAlignment="Left" Height="36" Margin="0,216,0,0" VerticalAlignment="Top" Width="259" Grid.Column="1" Background="#F8B5CDFF" FontSize="20" FontWeight="Bold"/>
-        <Label Name="lblresult8" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="69" Margin="0,292,0,0" VerticalAlignment="Top" Width="259" Background="#FF00FF3A" FontSize="22" FontWeight="Bold"/>
+        <Label Name="lblresult8" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="69" Margin="0,292,0,0" VerticalAlignment="Top" Width="259" Background="#FFBDFFF9" FontSize="22" FontWeight="Bold"/>
     </Grid>
 </Window>
