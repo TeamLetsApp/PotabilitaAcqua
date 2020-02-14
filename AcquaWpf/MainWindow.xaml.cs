@@ -35,45 +35,58 @@ namespace AcquaWpf
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            lblresult.Content = "";
+            lblresult1.Content = "";
+            lblresult2.Content = "";
+            lblresult3.Content = "";
+            lblresult4.Content = "";
+            lblresult5.Content = "";
+            lblresult6.Content = "";
+            lblresult7.Content = "";
+            lblresult8.Content = "";
             try
             {
                 double t = double.Parse(temperatura.Text);
                 bool rispT = Metodi.ControlloTemperatura(t);
                 if (rispT == true)
                 {
-                    lblresult.Content += "Temperatura : si \n";
-                     f1 = true;
+                    lblresult1.Content += "Temperatura : si \n";
+                    lblresult1.Foreground = new SolidColorBrush(Colors.Green);
+                    f1 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Temperatura : no \n";
+                    lblresult1.Content += "Temperatura : no \n";
                      f1 = false;
+                    lblresult1.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 double p = double.Parse(ph.Text);
                 bool rispP = Metodi.ControlloPh(p);
                 if (rispP == true)
                 {
-                    lblresult.Content += "Ph : si \n";
-                     f2 = true;
+                    lblresult2.Content += "Ph : si \n";
+                    lblresult2.Foreground = new SolidColorBrush(Colors.Green);
+                    f2 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Ph : no \n";
+                    lblresult2.Content += "Ph : no \n";
                     f2 = false;
+                    lblresult2.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 double r = double.Parse(residuo.Text);
                 double l1 = double.Parse(litri.Text);
                 bool rispR = Metodi.ControlloResiduo(r, l1);
                 if (rispR == true)
                 {
-                    lblresult.Content += "Residuo : si \n";
-                     f3 = true;
+                    lblresult3.Content += "Residuo : si \n";
+                    lblresult3.Foreground = new SolidColorBrush(Colors.Green);
+                    f3 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Residuo : no  \n";
+                    lblresult3.Content += "Residuo : no  \n";
                     f3 = false;
+                    lblresult3.Foreground = new SolidColorBrush(Colors.Red);
 
                 }
                 double a = double.Parse(ammoniaca.Text);
@@ -81,51 +94,59 @@ namespace AcquaWpf
                 bool rispA = Metodi.ControlloAmmoniaca(a, l2);
                 if (rispA == true)
                 {
-                    lblresult.Content += "Ammoniaca : si \n";
-                     f4 = true;
+                    lblresult4.Content += "Ammoniaca : si \n";
+                    lblresult4.Foreground = new SolidColorBrush(Colors.Green);
+                    f4 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Ammoniaca : no \n";
+                    lblresult4.Content += "Ammoniaca : no \n";
                      f4 = false;
+                    lblresult4.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 double ni = double.Parse(nitriti.Text);
                 bool rispNi = Metodi.ControlloNitriti(ni);
                 if (rispNi == true)
                 {
-                    lblresult.Content += "Nitriti : si \n";
-                     f5 = true;
+                    lblresult5.Content += "Nitriti : si \n";
+                    lblresult5.Foreground = new SolidColorBrush(Colors.Green);
+                    f5 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Nitriti : no \n";
+                    lblresult5.Content += "Nitriti : no \n";
                      f5 = false;
+                    lblresult5.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 double na = double.Parse(nitrati.Text);
                 double l3 = double.Parse(litri.Text);
                 bool rispNa = Metodi.ControlloNitrati(na, l3);
                 if (rispNa == true)
                 {
-                    lblresult.Content += "Nitrati : si \n";
-                     f6 = true;
+                    lblresult6.Content += "Nitrati : si \n";
+                    lblresult6.Foreground = new SolidColorBrush(Colors.Green);
+                    f6 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Nitrati : no \n";
+                    lblresult6.Content += "Nitrati : no \n";
                      f6 = false;
+                    lblresult6.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 double c = double.Parse(cloruri.Text);
                 double l4 = double.Parse(litri.Text);
                 bool rispC = Metodi.ControlloCloruri(a, l4);
                 if (rispC == true)
                 {
-                    lblresult.Content += "Cloruri : si \n";
-                     f7 = true;
+                    lblresult7.Content += "Cloruri : si \n";
+                    lblresult7.Foreground = new SolidColorBrush(Colors.Green);
+                    f7 = true;
                 }
                 else
                 {
-                    lblresult.Content += "Cloruri : no \n";
+                    lblresult7.Content += "Cloruri : no \n";
                      f7 = false;
+                    lblresult7.Foreground = new SolidColorBrush(Colors.Red);
                 }
             }
             catch
@@ -139,7 +160,14 @@ namespace AcquaWpf
                 ammoniaca.Clear();
                 residuo.Clear();
                 temperatura.Clear();
-                lblresult.Content = "";
+                lblresult1.Content = "";
+                lblresult2.Content = "";
+                lblresult3.Content = "";
+                lblresult4.Content = "";
+                lblresult5.Content = "";
+                lblresult6.Content = "";
+                lblresult7.Content = "";
+                lblresult8.Content = "";
             }
             finally
             {
@@ -154,15 +182,13 @@ namespace AcquaWpf
             }
             if(f1&&f2&&f3&&f4&&f5&&f6&&f7==true)
             {
-                lblresult.Content += (" \n");
-                lblresult.Content += (" \n");
-                lblresult.Content += ("L'acqua è potabile");
+                lblresult8.Content += ("L'acqua è potabile");
+                lblresult8.Foreground = new SolidColorBrush(Colors.Green);
             }
             else
             {
-                lblresult.Content += (" \n");
-                lblresult.Content += (" \n");
-                lblresult.Content += ("L'acqua non è potabile");
+                lblresult8.Content += ("L'acqua non è potabile");
+                lblresult8.Foreground = new SolidColorBrush(Colors.Red);
             }
         }
 
